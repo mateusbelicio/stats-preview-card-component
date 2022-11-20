@@ -1,0 +1,327 @@
+/**************************/
+/* VARIABLES */
+
+:root {
+  /* Main colors */
+  --clr-primary-300: hsl(244, 38%, 16%);
+  --clr-primary-400: hsl(233, 47%, 7%);
+  --clr-accent-400: hsl(277, 64%, 61%);
+  /* Neutral colors */
+  --clr-neutral-200: hsla(0, 0%, 100%, 0.6);
+  --clr-neutral-300: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-400: hsl(0, 0%, 100%);
+
+  /* Font sizes */
+  --fs-200: 0.8125rem; /* 13px */
+  --fs-300: 0.9375rem; /* 15px */
+  --fs-400: 1rem; /* 16px */
+  --fs-500: 1.5rem; /* 24px */
+  --fs-600: 1.75rem; /* 28px */
+  --fs-700: 2.25rem; /* 36px */
+  --fs-800: 3rem; /* 48px */
+
+  --fs-body: var(--fs-300);
+  --fs-heading: var(--fs-600);
+
+  /* Font weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Font family */
+  --ff-primary: 'Inter', sans-serif;
+  --ff-secondary: 'Lexend Deca', sans-serif;
+
+  /* Line height */
+  --lh-200: 1.1;
+  --lh-300: 1.2;
+  --lh-400: 1.5;
+  --lh-500: 1.6;
+  --lh-600: 1.64;
+
+  --lh-body: var(--lh-600);
+  --lh-heading: var(--lh-200);
+}
+
+/* Desktop */
+@media screen and (min-width: 55em) {
+  :root {
+    /* Font sizes */
+    --fs-heading: var(--fs-700);
+
+    /* Line height */
+    --lh-body: var(--lh-500);
+    --lh-heading: var(--lh-300);
+  }
+}
+
+/**************************/
+/* RESET CSS */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin, padding and font */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-300);
+  font-family: var(--ff-primary);
+  line-height: var(--lh-body);
+  text-rendering: optimizeSpeed;
+
+  /* Only for demo */
+  display: grid;
+  place-content: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**************************/
+/* Composition */
+
+
+/**************************/
+/* Utilities */
+
+.text-primary-300 { color: var(--clr-primary-300);}
+.text-primary-400 { color: var(--clr-primary-400);}
+.text-accent-400 { color: var(--clr-accent-400);}
+.text-neutral-200 { color: var(--clr-neutral-200);}
+.text-neutral-300 { color: var(--clr-neutral-300);}
+.text-neutral-400 { color: var(--clr-neutral-400);}
+
+.bg-primary-300 { background-color: var(--clr-primary-300);}
+.bg-primary-400 { background-color: var(--clr-primary-400);}
+.bg-accent-400 { background-color: var(--clr-accent-400);}
+.bg-neutral-200 { background-color: var(--clr-neutral-200);}
+.bg-neutral-300 { background-color: var(--clr-neutral-300);}
+.bg-neutral-400 { background-color: var(--clr-neutral-400);}
+
+.fw-regular { font-weight: var(--fw-regular); }
+.fw-bold { font-weight: var(--fw-bold); }
+
+.lh-body { line-height: var(--lh-body);}
+.lh-heading { line-height: var(--lh-heading);}
+
+.fs-heading-primary { font-size: var(--fs-heading); }
+.fs-body { font-size: var(--fs-body); }
+.fs-200 { font-size: var(--fs-200); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-800 { font-size: var(--fs-800); }
+
+.container {
+  --max-width: 69.375rem;
+  --padding: 1.5rem;
+
+  margin-inline: auto;
+  width: min(var(--max-width), calc(100% - (var(--padding) * 2)));
+  min-width: 20.4375rem;
+}
+
+/**************************/
+/* Block */
+
+.card {
+  animation: fadeIn 1s ease-out 0.5s forwards;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem hsla(0, 0%, 7%, 0.25);
+  display: grid;
+  grid-template-rows: minmax(14rem, 15rem) 1fr;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.card__image {
+  max-height: 15rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__image img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.card__image::before {
+  background-color: var(--clr-accent-400);
+  content: '';
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card__content {
+  padding: 2.5rem 1.75rem 2.25rem 1.75rem;
+  text-align: center;
+}
+
+.card__content > :not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.content__features {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.content__features .info span {
+  display: block;
+  line-height: var(--lh-200);
+}
+
+.info-number {
+  margin-bottom: 0.6rem;
+}
+
+.info-name {
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+}
+
+.footer {
+  bottom: 1rem;
+  font-size: 0.6rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+}
+
+.footer a {
+  color: var(--clr-neutral-200);
+  text-decoration: none;
+}
+
+.footer a:hover, .footer a:focus {
+  color: var(--clr-accent-400);
+  text-decoration: underline;
+}
+
+/**************************/
+/* MEDIA QUERY */
+
+@media screen and (min-width: 32em) {
+  .card__image img {
+    height: 100%;
+  }
+
+  .content__features {
+    grid-auto-flow: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 42em) {
+  .card {
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 33.75rem;
+    column-gap: 1rem;
+  }
+
+  .card__image {
+    justify-self: end;
+    grid-column: 2;
+    max-height: none;
+  }
+  
+  .card__content {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .content__features {
+    justify-content: start;
+    justify-items: start;
+    grid-auto-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 55em) {
+  .card {
+    column-gap: 4rem;
+  }
+
+  .card__content {
+    padding: 4.5rem 3rem 4.5rem 4.5rem; 
+  }
+
+  .content__features {
+    margin-top: 4.5rem;
+  }
+}
+
+/**************************/
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    transform: translate3d(0, 5rem, 1rem);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
