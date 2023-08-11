@@ -1,24 +1,18 @@
-# Frontend Mentor - Stats preview card component solution
+<div align="center">
+  <img align="right" src="https://www.frontendmentor.io/static/images/logo-mobile.svg" alt="Frontendmentor icon" />
+  <h2 align="left">Frontend Mentor - Stats preview card component solution</h2>
+</div>
 
-![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62).
+<!-- ![My Profile](https://img.shields.io/badge/Status-building-blue?style=flat) -->
+![My Profile](https://img.shields.io/badge/Status-finished-green?style=flat)
+&dot;
+[![Status](https://img.shields.io/website?label=Website&down_color=inactive&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fmateusbelicio.github.io/stats-preview-card-component)](https://mateusbelicio.github.io/stats-preview-card-component) 
+&dot;
+[![My Profile](https://img.shields.io/badge/Profile-Mateus_Belicio-282C2E?style=flat&logo=frontendmentor)](https://www.frontendmentor.io/profile/mateusbelicio)
 
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-## Overview
+---
 
 ### The challenge
 
@@ -30,13 +24,6 @@ Users should be able to:
 
 ![](./design/desktop-result.png)
 
-### Links
-
-- 🔗 [Solution URL](https://github.com/mateusbelicio/stats-preview-card-component)
-- 🔗 [Live Site URL](https://mateusbelicio.github.io/stats-preview-card-component)
-
-## My process
-
 ### Built with
 
 - Semantic HTML5 markup
@@ -45,6 +32,9 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-## Author
+---
+
+### Author
 
 - Frontend Mentor - [@mateusbelicio](https://www.frontendmentor.io/profile/mateusbelicio)
+- Linkedin - [@mateusbelicio](https://www.linkedin.com/in/mateusbelicio)
